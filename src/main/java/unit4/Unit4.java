@@ -78,8 +78,11 @@ public class Unit4 {
      * @return the factorial of n
      */
     public int findFactorial(int n) {
-        // TODO: Implement this method
-        return 0;
+        int result = 1; // start at 1, not 0
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+    }
+    return result;
     }
 
     /**
@@ -102,8 +105,16 @@ public class Unit4 {
      * @return the number of vowels found
      */
     public int countVowels(String str) {
-        // TODO: Implement this method
-        return 0;
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = Character.toLowerCase(str.charAt(i));
+
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+        }
+    }
+
+    return count;
     }
 
     /**
@@ -129,8 +140,12 @@ public class Unit4 {
      * @return true if the string is a palindrome, false otherwise
      */
     public boolean isPalindrome(String str) {
-        // TODO: Implement this method
-        return false;
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+                return false;
+            }
+         }
+    return true;
     }
 
     /**
@@ -160,7 +175,25 @@ public class Unit4 {
      * @param n the size parameter for the patterns
      */
     public void printAsteriskPatterns(int n) {
-        // TODO: Implement this method
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+    }
+    System.out.print("\n");
+
+    for (int i = 0; i < n; i++) {          
+        for (int j = 0; j < n; j++) {      
+            System.out.print("*");
+        }
+        System.out.print("\n");
+    }
+
+    for (int i = 1; i <= n; i++) {          
+        for (int j = 0; j < i; j++) {       
+            System.out.print("*");
+        }
+        System.out.print("\n");
+    }
+
     }
 
     /**
@@ -184,6 +217,11 @@ public class Unit4 {
      * @param n the size of the table (n x n)
      */
     public void multiplicationTable(int n) {
-        // TODO: Implement this method
+        for (int i = 1; i <= n; i++) {       
+            for (int j = 1; j <= n; j++) {      
+                System.out.print((i * j) + "\t");
+            }
+        System.out.print("\n");             
+        }
     }
 }
