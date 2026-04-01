@@ -12,19 +12,15 @@ public class Unit4 {
     /**
      * Calculates the sum of all integers from 1 to n (inclusive).
      * If n is 0 or negative, returns 0.
-     *
      * <p>Points: 10</p>
-     *
      * <p>Examples:</p>
      * <ul>
      *   <li>sumNumbers(5) returns 15 (1+2+3+4+5)</li>
      *   <li>sumNumbers(1) returns 1</li>
      *   <li>sumNumbers(0) returns 0</li>
      * </ul>
-     *
      * <p>Hint: Use a for loop that starts at 1 and goes up to n,
      * adding each value to an accumulator variable.</p>
-     *
      * @param n the upper bound (inclusive)
      * @return the sum of integers from 1 to n
      */
@@ -34,27 +30,24 @@ public class Unit4 {
             return 0;
         }
         for(int i = 0; i <= n; i++){
-            sum = sum + 1;
+            sum = sum + i;
         }
         return sum;
     }
-
+       
+     
     /**
      * Returns a new String consisting of the given string repeated n times.
      * If n is 0 or the string is empty, returns an empty string.
-     *
      * <p>Points: 10</p>
-     *
      * <p>Examples:</p>
      * <ul>
      *   <li>repeatString("hello", 3) returns "hellohellohello"</li>
      *   <li>repeatString("test", 1) returns "test"</li>
      *   <li>repeatString("hello", 0) returns ""</li>
      * </ul>
-     *
      * <p>Hint: Use a loop to concatenate the string n times.
      * Start with an empty String and add to it each iteration.</p>
-     *
      * @param str the string to repeat
      * @param n   the number of times to repeat
      * @return the repeated string
@@ -70,7 +63,6 @@ public class Unit4 {
     /**
      * Calculates the factorial of n (written as n!).
      * The factorial of 0 is 1. The factorial of n is 1 * 2 * 3 * ... * n.
-     *
      * <p>Points: 15</p>
      *
      * <p>Examples:</p>
@@ -87,6 +79,7 @@ public class Unit4 {
      * @return the factorial of n
      */
     public int findFactorial(int n) {
+        // TODO: Implement this method
         int result = 1;
         for(int i = n; i >= 1; i--){
             result = result * i;
@@ -114,10 +107,11 @@ public class Unit4 {
      * @return the number of vowels found
      */
     public int countVowels(String str) {
+        // TODO: Implement this method
         int count = 0;
         for(int i = 0; i < str.length(); i++){
             char bob = Character.toLowerCase(str.charAt(i));
-            if(bob == 'a' || bob == 'e' || bob == 'i' || bob == 'o' || bob == 'u'){
+            if(bob == 'a' || bob == 'e' || bob == 'i' || bob == 'o' || bob == 'u' ){
                 count++;
             }
         }
@@ -150,9 +144,10 @@ public class Unit4 {
         String backwards = "";
         for(int i = str.length()-1; i >= 0; i--){
             backwards = backwards + str.charAt(i);
-
+           
         }
         return str.equals(backwards);
+       
     }
 
     /**
@@ -183,23 +178,26 @@ public class Unit4 {
      */
     public void printAsteriskPatterns(int n) {
         for(int i = 0; i < n; i++){
-            System.out.println("*");
+            System.out.print("*");
         }
-        System.out.println("/n");
+        System.out.print("\n");
 
-        for(int z = 0; x < n; x++){
+        for(int x = 0; x < n; x++){
             for(int y = 0; y < n; y++){
-                System.out.println("*")
+                System.out.print("*");
             }
-            System.out.println("/n");
+            System.out.print("\n");
         }
-
+       
 
         for(int x = 1; x <= n; x++){
             for(int y = 0; y < x; y++){
-                System.out.println("*");
+                System.out.print("*");
             }
+            System.out.print("\n");
         }
+       
+
     }
 
     /**
@@ -211,9 +209,9 @@ public class Unit4 {
      *
      * <p>Example: multiplicationTable(3) prints:</p>
      * <pre>
-     * 1	2	3
-     * 2	4	6
-     * 3	6	9
+     * 1    2   3
+     * 2    4   6
+     * 3    6   9
      * </pre>
      * <p>(where spaces above represent tab characters)</p>
      *
@@ -223,11 +221,11 @@ public class Unit4 {
      * @param n the size of the table (n x n)
      */
     public void multiplicationTable(int n) {
-        for (int x = 1; x <= n; x++) {       
-            for (int y = 1; y <= n; y++) {      
+        for(int x = 1; x <= n; x++){
+            for(int y = 1; y <= n; y++){
                 System.out.print(x * y + "\t");
             }
-            System.out.print("\n");             
+            System.out.print("\n");
         }
     }
 }
